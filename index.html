@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vida Saludable | Sitio Informativo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== HEADER Y MENU DE NAVEGACION ===== -->
+  <header class="header">
+    <div class="header__contenedor">
+      <a href="#inicio" class="logo">Vida<span>Saludable</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegacion" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="navMenu">
+        <ul class="nav__lista">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#proyecto" class="nav__link">Sobre el proyecto</a></li>
+          <li><a href="#consejos" class="nav__link">Consejos</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== SECCION INICIO ===== -->
+    <section id="inicio" class="hero">
+      <div class="hero__texto">
+        <h1>Pequenos habitos, grandes cambios</h1>
+        <p>Recopilamos consejos sencillos para comer mejor, moverte mas y descansar lo necesario, sin complicaciones.</p>
+        <a href="#consejos" class="boton">Ver consejos</a>
+      </div>
+    </section>
+
+    <!-- ===== SECCION SOBRE EL PROYECTO ===== -->
+    <section id="proyecto" class="proyecto">
+      <h2>Sobre el proyecto</h2>
+      <p>
+        Este sitio nacio como un trabajo en equipo para la materia de desarrollo web. Cada integrante del
+        equipo aporto una parte distinta: la estructura de la pagina, el diseno visual y las funciones que
+        la hacen interactiva. La idea es mostrar de forma clara informacion util sobre habitos saludables
+        que cualquiera puede aplicar en su dia a dia.
+      </p>
+    </section>
+
+    <!-- ===== SECCION CONSEJOS ===== -->
+    <section id="consejos" class="consejos">
+      <h2>Consejos para el dia a dia</h2>
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <h3>Alimentacion</h3>
+          <p>Incluye frutas y verduras en al menos dos comidas del dia y reduce el azucar agregado.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Actividad fisica</h3>
+          <p>Camina o haz ejercicio al menos 30 minutos, casi todos los dias de la semana.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Descanso</h3>
+          <p>Duerme entre 7 y 9 horas y trata de mantener horarios regulares para dormir y despertar.</p>
+        </article>
+        <article class="tarjeta">
+          <h3>Hidratacion</h3>
+          <p>Toma agua durante todo el dia, no solo cuando sientas sed.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== SECCION CONTACTO / FORMULARIO ===== -->
+    <section id="contacto" class="contacto">
+      <h2>Contacto</h2>
+      <p>Tienes dudas o quieres sugerir un tema? Escribenos.</p>
+
+      <form id="formContacto" class="formulario" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+          <span class="error" id="errorNombre"></span>
+        </div>
+
+        <div class="campo">
+          <label for="email">Correo electronico</label>
+          <input type="text" id="email" name="email" placeholder="tu@correo.com">
+          <span class="error" id="errorEmail"></span>
+        </div>
+
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje"></textarea>
+          <span class="error" id="errorMensaje"></span>
+        </div>
+
+        <button type="submit" class="boton">Enviar</button>
+        <p class="formulario__exito" id="mensajeExito"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>&copy; <span id="anioActual">2026</span> Vida Saludable - Proyecto colaborativo de desarrollo web.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
